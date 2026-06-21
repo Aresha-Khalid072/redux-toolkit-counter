@@ -1,16 +1,71 @@
-# React + Vite
+# Redux Toolkit Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple counter and like-button app built with **React** and **Redux Toolkit**, created to practice state management fundamentals — actions, reducers, and the store — using RTK's modern, boilerplate-free approach.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 🔢 Increment / decrement a counter using Redux Toolkit
+- ➕ Increase the counter by a custom amount via an input field
+- ⚡ Built with Vite for a fast dev experience
+- 🧩 Clean separation of state logic via `redux/features/`
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [React](https://react.dev/)
+- [Redux Toolkit](https://redux-toolkit.js.org/)
+- [React Redux](https://react-redux.js.org/)
+- [Vite](https://vitejs.dev/)
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── redux/
+│   ├── features/
+│   │   ├── counterSlice.js   # Counter state and reducers
+│   │ 
+│   └── store.js              # Redux store configuration
+├── App.jsx                   # Main component
+├── main.jsx                  # App entry point
+└── index.css                 # Global styles
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js installed on your machine
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Aresha-Khalid072/redux-toolkit-counter.git
+   cd redux-toolkit-counter
+   ```
+
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+4. Open the local URL shown in the terminal (usually `http://localhost:5173`)
+
+## What I Learned
+
+This project was built to understand:
+- How to set up a Redux store with `configureStore`
+- Creating slices with `createSlice` for cleaner reducer logic
+- Connecting React components to Redux state with `useSelector` and `useDispatch`
+- Dispatching actions with a payload (`incrementByAmount`) alongside simple actions
+- Managing multiple independent pieces of state (counter + likes) in one store
+
+## License
+
+This project is open source and available for learning purposes.
